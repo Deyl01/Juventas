@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b78d0990d12b144cb9d5db9519d29a5, type: 3}
   m_Name: Patty
   m_EditorClassIdentifier: 
-  foodName: 
-  foodInfo: 
-  foodType: 0
-  foodSprite: {fileID: 0}
+  materialName: 
+  TrimmedMeaterialName: 
+  foodType: 1
+  foodKind: 0
+  materialSprite: {fileID: 0}
+  trimmedMaterialSprite: {fileID: 0}
   cookingTime: 0
   ingredients: []
