@@ -8,6 +8,7 @@ public class DataManager : ManagerScript
 
     [Header("Managers")]
     public InputManager input;
+    public UIManager ui; 
 
     private void Awake()
     {
