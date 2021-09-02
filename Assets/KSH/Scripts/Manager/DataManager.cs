@@ -6,6 +6,9 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager instance = null;
 
+    [Header("Managers")]
+    public CookingManager cooking;
+
     private void Awake()
     {
         if (instance.Equals(null))

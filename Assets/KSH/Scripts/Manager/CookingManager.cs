@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class CookingManager : MonoBehaviour
 {
-    public void SetCookingMaterial()
+    public void SetMaterialButtonDown()
     {
         
+    }
+
+    void SetCookingMaterial()
+    {
+
     }
 }
