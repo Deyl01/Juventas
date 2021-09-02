@@ -2,21 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataManager : ManagerScript
+public class DataManager : MonoBehaviour
 {
     public static DataManager instance = null;
 
-    [Header("Managers")]
-    public InputManager input;
-    public UIManager ui; 
-
     private void Awake()
     {
-        if(instance == null)
+        if (instance.Equals(null))
             instance = this;
-        else 
-        {
-            Debug.LogWarning("중복");
-        }
+        else
+            Debug.LogWarning("DataManager 중복");
     }
 }
