@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2616557652079326310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,13 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2457c327254358d47abc0a10afc6abf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matSprites:
-  - {fileID: 21300000, guid: d011a1d3a512cc14bbb64045896bd3dd, type: 3}
-  - {fileID: 21300000, guid: 841f0cd77fe03644289dd79d55709818, type: 3}
-  - {fileID: 21300000, guid: ad8ca11ad2e70784cb326297e6666daa, type: 3}
-  - {fileID: 21300000, guid: 61397428bb80f3d48aeb6ebe2031f9c8, type: 3}
-  - {fileID: 21300000, guid: b555c7fb3ede39242951d41cb477a40c, type: 3}
-  - {fileID: 21300000, guid: 8c8739c8240bf97479d807e197d7a7df, type: 3}
-  endPos: {x: 0, y: 0}
-  moveSpeed: 15
+  endPos: {x: 0, y: 0, z: 0}
+  moveSpeed: 25
   render: {fileID: 5322738367691391105}

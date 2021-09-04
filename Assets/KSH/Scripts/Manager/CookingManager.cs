@@ -9,11 +9,22 @@ enum MaterialPositionIndex
     Current
 }
 
+
+public enum MaterialType
+{
+    DownBread = 0,
+    OnBread,
+    Tomato,
+    Meat,
+    Cheese
+}
+
 public class CookingManager : Manager
 {
+    public Sprite[] matSprites;
     public GameObject foodMaterialPrefab;
     public Transform[] materialPosition; // start | StartEnd | current
-    public float deltaPosition;
+    public Vector3 deltaPosition;
 
     List<CookingMaterial> curMatList = new List<CookingMaterial>();
 
@@ -43,8 +54,8 @@ public class CookingManager : Manager
 
     void MaterialAddDeltaPositoin()
     {
-        Vector2 tmp = materialPosition[2].position;
-        tmp.y += deltaPosition;
+        Vector3 tmp = materialPosition[2].position;
+        tmp += deltaPosition;
         materialPosition[2].position = tmp;
     }
 
