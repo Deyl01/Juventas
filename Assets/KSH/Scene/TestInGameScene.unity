@@ -1364,7 +1364,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1112531606}
         m_TargetAssemblyTypeName: Comment, Assembly-CSharp
-        m_MethodName: ReadFromList
+        m_MethodName: CommentReadFromList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2139,6 +2139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcdf423ca3dcb545a1ba0711c83f609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commentListPositive:
+  - 
+  commentListNeutral:
+  - 
+  commentListNegative:
+  - 
 --- !u!4 &1112531607
 Transform:
   m_ObjectHideFlags: 0
