@@ -17,7 +17,6 @@ public class CookingMaterial : MonoBehaviour
         tr = GetComponent<Transform>();
         render = GetComponent<SpriteRenderer>();
 
-        Debug.Log(endPos);
     }
 
     private void Update()
