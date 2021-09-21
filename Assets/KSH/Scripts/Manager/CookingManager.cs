@@ -2,23 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MaterialPositionIndex
-{
-    Start ,
-    StartEnd,
-    Current
-}
-
-
-public enum MaterialType
-{
-    DownBread = 0,
-    OnBread,
-    Tomato,
-    Meat,
-    Cheese
-}
-
 public class CookingManager : Manager
 {
     public Sprite[] matSprites;
@@ -59,14 +42,26 @@ public class CookingManager : Manager
         materialPosition[2].position = tmp;
     }
 
-    void ResetMaterial()
+    void ResetMaterial() //쌓인 재료 전부 제거
     {
         for(int i = 0 ; i < curMatList.Count; i++)
         {
             Destroy(curMatList[i].gameObject);
         }
-        // materialPosition[(int)MaterialPositionIndex.Current].position = materialPosition[((int)MaterialPositionIndex.StartEnd)].position;
         materialPosition[2].position = materialPosition[1].position;
         curMatList.Clear();
+    }
+
+    public void ServiseFood()
+    {
+        //todo 손님한테 제공
+        
+        foreach(CookingMaterial i in curMatList)
+        {
+            
+        }
+        
+        ResetMaterial();
+
     }
 }

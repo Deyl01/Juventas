@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum MaterialPositionIndex
+{
+    Start ,
+    StartEnd,
+    Current
+}
+
 public class DataManager : Manager
 {
     public static DataManager instance = null;
@@ -9,9 +16,11 @@ public class DataManager : Manager
     [Header("Managers")]
     public CookingManager cooking;
 
+    List<CookingMaterial> offerFood;
+
     public override void ManagerInit()
     {
-        Debug.Log("datamanager");
+        Debug.Log("DataManager");
     }
 
     private void Awake()

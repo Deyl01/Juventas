@@ -10,13 +10,14 @@ public class CookingMaterial : MonoBehaviour
     public float moveSpeed;
 
     Transform tr;
-    public SpriteRenderer render;
+    SpriteRenderer render;
+
+
 
     private void Start()
     {
         tr = GetComponent<Transform>();
         render = GetComponent<SpriteRenderer>();
-
     }
 
     private void Update()

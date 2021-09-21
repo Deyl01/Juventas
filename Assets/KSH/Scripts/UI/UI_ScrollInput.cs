@@ -14,6 +14,8 @@ public class UI_ScrollInput : MonoBehaviour
     [SerializeField]
     private float swipeSensitivity;
 
+    List<CookingMaterial> curMatList;
+
     private void Update()
     {
         Swipe1();
@@ -42,12 +44,13 @@ public class UI_ScrollInput : MonoBehaviour
                 {
                     if (touchDif.x > 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
                     {
+                        DataManager.instance.cooking.ServiseFood();
                         Debug.Log("right");
                     }
-                    else if (touchDif.x < 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
+                    else if (touchDif.x < 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x)) //left
                     {
                         DataManager.instance.cooking.ResetMaterialButtondown();
-                        Debug.Log("Left");
+                        Debug.Log("Cleare Food");
                     }
                 }
                 //터치.
