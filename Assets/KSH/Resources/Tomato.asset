@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5e9c2c113ef054489322493dc5bd09e, type: 3}
-  m_Name: UpBread 2
+  m_Name: Tomato
   m_EditorClassIdentifier: 
   type: 0
   sprite: {fileID: 0}
