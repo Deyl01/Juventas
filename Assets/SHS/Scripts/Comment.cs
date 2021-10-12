@@ -29,7 +29,7 @@ public class Comment : MonoBehaviour
         stringReader.Close();
 //        Debug.Log("1");
     }
-    void commentArray(int Type, string commntText) // 택스트 태그를 보고 분류 - 스파게티 코드를 짠거 같다.........
+    void commentArray(int Type, string commntText) // 택스트 태그를 보고 분류
     {
 //        print(commentListPositive.Length);
         switch (Type) {

@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//스택 최대 7개
 public class CookingManager : Manager
 {
-    public Sprite[] matSprites;
+    public BurgerMaterial[] burgerMaterials;
+
     public GameObject foodMaterialPrefab;
+
     public Transform[] materialPosition; // start | StartEnd | current
+
     public Vector3 deltaPosition;
 
     List<CookingMaterial> curMatList = new List<CookingMaterial>();
@@ -18,21 +23,33 @@ public class CookingManager : Manager
 
     public void SetMaterialButtonDown(int _index)
     {
-        SapwnMaterial(_index);
+        SpawnMaterial(_index);
         MaterialAddDeltaPositoin();
     }
 
     public void ResetMaterialButtondown() => ResetMaterial();
-    
 
-    void SapwnMaterial(int _index)
+    int i = 0;
+    void SpawnMaterial(int _index)
     {
-        GameObject tmp = Instantiate<GameObject>(foodMaterialPrefab);
-        CookingMaterial tmpScript = tmp.GetComponent<CookingMaterial>();
-        curMatList.Add(tmpScript);
-        tmpScript.SetMaterial((MaterialType)_index);
-        tmpScript.endPos = materialPosition[2].position;
-        tmp.transform.position = materialPosition[0].position;
+        if (i < 7) {
+            GameObject tmp = Instantiate<GameObject>(foodMaterialPrefab);
+            Sprite bgSprite = tmp.GetComponent<SpriteRenderer>().sprite;
+            CookingMaterial tmpScript = tmp.GetComponent<CookingMaterial>();
+
+            tmp.GetComponent<SpriteRenderer>().sprite = burgerMaterials[_index].sprite;
+
+            bgSprite = burgerMaterials[_index].sprite;
+
+            Debug.Log("112213");
+
+            curMatList.Add(tmpScript);
+
+            tmpScript.endPos = materialPosition[2].position;
+            tmp.transform.position = materialPosition[0].position;
+            i++;
+        }
+        
     }
 
     void MaterialAddDeltaPositoin()

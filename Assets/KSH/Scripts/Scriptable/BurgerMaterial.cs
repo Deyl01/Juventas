@@ -6,12 +6,12 @@ public enum MaterialType
     UpBread,
     Tomato,
     Meat,
-    Cheese
+    Cheese,
+    Lettuce
 }
 [CreateAssetMenu(fileName = "BurgerMaterial", menuName = "NewBurgerMaterial/BurgerMaterial")]
 public class BurgerMaterial : ScriptableObject
 {
-
     public MaterialType type;
     public Sprite sprite;
     public string name;

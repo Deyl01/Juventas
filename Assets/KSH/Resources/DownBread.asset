@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DownBread
   m_EditorClassIdentifier: 
   type: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 29a1bfd94e4094b448164bb963a52d7b, type: 3}
   name: 

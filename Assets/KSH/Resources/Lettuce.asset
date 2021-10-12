@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5e9c2c113ef054489322493dc5bd09e, type: 3}
-  m_Name: Patty
+  m_Name: Lettuce
   m_EditorClassIdentifier: 
-  type: 3
-  sprite: {fileID: 21300000, guid: ae8cee7e75e8ed945a1392368d54e276, type: 3}
+  type: 5
+  sprite: {fileID: 21300000, guid: a93b3e97508cb3643bb02cb4b4e9a1b0, type: 3}
   name: 

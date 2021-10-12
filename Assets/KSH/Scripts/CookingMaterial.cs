@@ -6,6 +6,7 @@ public class CookingMaterial : MonoBehaviour
 {
 
     public Vector3 endPos;
+    public Vector3 S_EndPos;
 
     public float moveSpeed;
 
@@ -18,18 +19,22 @@ public class CookingMaterial : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         render = GetComponent<SpriteRenderer>();
+        S_EndPos = tr.transform.position;
+        StartCoroutine(WaitAnim());
+
     }
 
     private void Update()
     {
         if (!tr.position.Equals(endPos))
         {
-            tr.position = Vector3.MoveTowards(tr.position, endPos, moveSpeed * Time.deltaTime);
+            tr.position = Vector3.MoveTowards(tr.position, S_EndPos, moveSpeed * Time.deltaTime);
         }
     }
 
-    public void SetMaterial(MaterialType _index)
+    IEnumerator WaitAnim()
     {
-        render.sprite = DataManager.instance.cooking.matSprites[(int)_index];
+        yield return new WaitForSeconds(1);
+        S_EndPos = endPos;
     }
 }
